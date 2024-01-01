@@ -4,8 +4,8 @@ import android.content.Context
 import com.github.kr328.clash.common.store.Store
 import com.github.kr328.clash.common.store.asStoreProvider
 import com.github.kr328.clash.core.model.ProxySort
-//import com.github.kr328.clash.design.model.AppInfoSort
-//import com.github.kr328.clash.design.model.DarkMode
+import com.github.kr328.clash.design.model.AppInfoSort
+import com.github.kr328.clash.design.model.DarkMode
 
 class UiStore(context: Context) {
     private val store = Store(
@@ -19,11 +19,11 @@ class UiStore(context: Context) {
         defaultValue = true
     )
 
-//    var darkMode: DarkMode by store.enum(
-//        key = "dark_mode",
-//        defaultValue = DarkMode.Auto,
-//        values = DarkMode.values()
-//    )
+    var darkMode: DarkMode by store.enum(
+        key = "dark_mode",
+        defaultValue = DarkMode.Auto,
+        values = DarkMode.values()
+    )
 
     var proxyExcludeNotSelectable by store.boolean(
         key = "proxy_exclude_not_selectable",
@@ -46,11 +46,11 @@ class UiStore(context: Context) {
         defaultValue = ""
     )
 
-//    var accessControlSort: AppInfoSort by store.enum(
-//        key = "access_control_sort",
-//        defaultValue = AppInfoSort.Label,
-//        values = AppInfoSort.values(),
-//    )
+    var accessControlSort: AppInfoSort by store.enum(
+        key = "access_control_sort",
+        defaultValue = AppInfoSort.Label,
+        values = AppInfoSort.values(),
+    )
 
     var accessControlReverse: Boolean by store.boolean(
         key = "access_control_reverse",
